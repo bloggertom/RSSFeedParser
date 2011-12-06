@@ -1,0 +1,28 @@
+This is a really simple RSS feed parser released under the MIT license.
+It currently uses an NSXMLParser to populate a NSMutableArray
+though I plan on added a new class with a TBXML parser to speed it up.
+
+I appreachiate this isn't a hard thing to make but RSS feeds are pretty
+common and I'm making quite a few apps that are going to need an RSS
+feed parser so I thought I'd make on that would do all for all of them.
+And as I've made it I thought I would share it. Hell it might be of help
+to someone.
+
+This currenlty uses ARC but I might make one that doesn't so more people
+can use it.
+
+To use it is pretty simple add the RSSXMLParserDelegate and RSSItem
+objects to your project. Instanciate the parser with a URL then call:
+
+aMutableArray = [parser getRSSData];
+
+This also unescapes HTML text so data is ready to go straight into a
+label. I did adapt that code from some on source forge so I'll get the
+authers name commented in with a link next time I work on it.
+
+Demo is very simplistic, just diplays a default RSS feed and has a
+crappy detailed view when you click on one.
+
+Happy hacking
+
+Bloggertom
