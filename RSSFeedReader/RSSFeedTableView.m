@@ -68,7 +68,7 @@
     [super viewDidAppear:animated];
     
     if (!rssData || [rssData count] == 0) {
-        rssParser = [[RSSXMLParsingDelegate alloc]initWithURL:@"http://www.31days.co.uk/rss.xml"];
+        rssParser = [[RSSNSXMLParsingDelegate alloc]initWithURL:@"http://www.31days.co.uk/rss.xml"];
         rssData = [rssParser getRSSArray];
         
         [self.tableView reloadData];

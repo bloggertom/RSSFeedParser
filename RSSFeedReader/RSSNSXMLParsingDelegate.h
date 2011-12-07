@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RSSItem.h"
-@interface RSSXMLParsingDelegate : NSObject <NSXMLParserDelegate>
+@interface RSSNSXMLParsingDelegate : NSObject <NSXMLParserDelegate>
 
 @property (nonatomic, copy) NSURL *url;
 @property (nonatomic, retain)NSXMLParser *parser;

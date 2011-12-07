@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 aberystwyth university. All rights reserved.
 //
 
-#import "RSSXMLParsingDelegate.h"
+#import "RSSNSXMLParsingDelegate.h"
 
-@implementation RSSXMLParsingDelegate
+@implementation RSSNSXMLParsingDelegate
 @synthesize url, parser;
 @synthesize currentItem;
 @synthesize currentArray;

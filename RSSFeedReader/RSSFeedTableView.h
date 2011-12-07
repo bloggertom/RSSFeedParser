@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RSSXMLParsingDelegate.h"
+#import "RSSNSXMLParsingDelegate.h"
 #import "IndicatorViewController.h"
 @interface RSSFeedTableView : UITableViewController
 
 @property (nonatomic, retain)NSMutableArray *rssData;
-@property (nonatomic, retain)RSSXMLParsingDelegate *rssParser;
+@property (nonatomic, retain)RSSNSXMLParsingDelegate *rssParser;
 @property (nonatomic, retain)IndicatorViewController *activityView;
 @end

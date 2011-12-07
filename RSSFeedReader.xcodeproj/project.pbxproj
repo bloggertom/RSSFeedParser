@@ -15,12 +15,15 @@
 		DB2A1503148D8EF100B71FF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A1502148D8EF100B71FF4 /* AppDelegate.m */; };
 		DB2A1512148D8F3D00B71FF4 /* RSSFeedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A1510148D8F3D00B71FF4 /* RSSFeedTableView.m */; };
 		DB2A1513148D8F3D00B71FF4 /* RSSFeedTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A1511148D8F3D00B71FF4 /* RSSFeedTableView.xib */; };
-		DB2A1516148D8FBF00B71FF4 /* RSSXMLParsingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A1515148D8FBF00B71FF4 /* RSSXMLParsingDelegate.m */; };
+		DB2A1516148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A1515148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m */; };
 		DB2A1519148D8FCE00B71FF4 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A1518148D8FCE00B71FF4 /* RSSItem.m */; };
 		DB2A151D148D93F300B71FF4 /* RSSItemDetailedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A151B148D93F300B71FF4 /* RSSItemDetailedView.m */; };
 		DB2A151E148D93F300B71FF4 /* RSSItemDetailedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A151C148D93F300B71FF4 /* RSSItemDetailedView.xib */; };
 		DB2A1525148D95AE00B71FF4 /* IndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2A1524148D95AE00B71FF4 /* IndicatorViewController.m */; };
 		DB2A1527148D969C00B71FF4 /* IndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2A1526148D969C00B71FF4 /* IndicatorViewController.xib */; };
+		DBEE799114901F9600EB3824 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEE799014901F9600EB3824 /* libz.dylib */; };
+		DBEE799614901FF100EB3824 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE799314901FF100EB3824 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DBEE799714901FF100EB3824 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE799514901FF100EB3824 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +40,8 @@
 		DB2A150F148D8F3D00B71FF4 /* RSSFeedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSFeedTableView.h; sourceTree = "<group>"; };
 		DB2A1510148D8F3D00B71FF4 /* RSSFeedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedTableView.m; sourceTree = "<group>"; };
 		DB2A1511148D8F3D00B71FF4 /* RSSFeedTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSFeedTableView.xib; sourceTree = "<group>"; };
-		DB2A1514148D8FBF00B71FF4 /* RSSXMLParsingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSXMLParsingDelegate.h; sourceTree = "<group>"; };
-		DB2A1515148D8FBF00B71FF4 /* RSSXMLParsingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSXMLParsingDelegate.m; sourceTree = "<group>"; };
+		DB2A1514148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSNSXMLParsingDelegate.h; sourceTree = "<group>"; };
+		DB2A1515148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSNSXMLParsingDelegate.m; sourceTree = "<group>"; };
 		DB2A1517148D8FCE00B71FF4 /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItem.h; sourceTree = "<group>"; };
 		DB2A1518148D8FCE00B71FF4 /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItem.m; sourceTree = "<group>"; };
 		DB2A151A148D93F300B71FF4 /* RSSItemDetailedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItemDetailedView.h; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		DB2A1523148D95AD00B71FF4 /* IndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicatorViewController.h; sourceTree = "<group>"; };
 		DB2A1524148D95AE00B71FF4 /* IndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicatorViewController.m; sourceTree = "<group>"; };
 		DB2A1526148D969C00B71FF4 /* IndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndicatorViewController.xib; sourceTree = "<group>"; };
+		DBEE799014901F9600EB3824 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DBEE799214901FF100EB3824 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		DBEE799314901FF100EB3824 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		DBEE799414901FF100EB3824 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		DBEE799514901FF100EB3824 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEE799114901F9600EB3824 /* libz.dylib in Frameworks */,
 				DB2A14F3148D8EF100B71FF4 /* UIKit.framework in Frameworks */,
 				DB2A14F5148D8EF100B71FF4 /* Foundation.framework in Frameworks */,
 				DB2A14F7148D8EF100B71FF4 /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +92,7 @@
 		DB2A14F1148D8EF100B71FF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBEE799014901F9600EB3824 /* libz.dylib */,
 				DB2A14F2148D8EF100B71FF4 /* UIKit.framework */,
 				DB2A14F4148D8EF100B71FF4 /* Foundation.framework */,
 				DB2A14F6148D8EF100B71FF4 /* CoreGraphics.framework */,
@@ -93,8 +103,7 @@
 		DB2A14F8148D8EF100B71FF4 /* RSSFeedReader */ = {
 			isa = PBXGroup;
 			children = (
-				DB2A1514148D8FBF00B71FF4 /* RSSXMLParsingDelegate.h */,
-				DB2A1515148D8FBF00B71FF4 /* RSSXMLParsingDelegate.m */,
+				DBEE798F14901EE300EB3824 /* Parsers */,
 				DB2A1501148D8EF100B71FF4 /* AppDelegate.h */,
 				DB2A1502148D8EF100B71FF4 /* AppDelegate.m */,
 				DB2A150F148D8F3D00B71FF4 /* RSSFeedTableView.h */,
@@ -122,6 +131,35 @@
 				DB2A1500148D8EF100B71FF4 /* RSSFeedReader-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBEE798F14901EE300EB3824 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				DBEE79991490201700EB3824 /* TBXML */,
+				DBEE79981490200000EB3824 /* NSXMLParser */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		DBEE79981490200000EB3824 /* NSXMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				DB2A1515148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m */,
+				DB2A1514148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.h */,
+			);
+			name = NSXMLParser;
+			sourceTree = "<group>";
+		};
+		DBEE79991490201700EB3824 /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				DBEE799214901FF100EB3824 /* NSDataAdditions.h */,
+				DBEE799314901FF100EB3824 /* NSDataAdditions.m */,
+				DBEE799414901FF100EB3824 /* TBXML.h */,
+				DBEE799514901FF100EB3824 /* TBXML.m */,
+			);
+			name = TBXML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +230,12 @@
 				DB2A14FF148D8EF100B71FF4 /* main.m in Sources */,
 				DB2A1503148D8EF100B71FF4 /* AppDelegate.m in Sources */,
 				DB2A1512148D8F3D00B71FF4 /* RSSFeedTableView.m in Sources */,
-				DB2A1516148D8FBF00B71FF4 /* RSSXMLParsingDelegate.m in Sources */,
+				DB2A1516148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m in Sources */,
 				DB2A1519148D8FCE00B71FF4 /* RSSItem.m in Sources */,
 				DB2A151D148D93F300B71FF4 /* RSSItemDetailedView.m in Sources */,
 				DB2A1525148D95AE00B71FF4 /* IndicatorViewController.m in Sources */,
+				DBEE799614901FF100EB3824 /* NSDataAdditions.m in Sources */,
+				DBEE799714901FF100EB3824 /* TBXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +339,7 @@
 				DB2A150E148D8EF100B71FF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
