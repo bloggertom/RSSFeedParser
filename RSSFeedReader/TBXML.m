@@ -204,7 +204,7 @@
 		xmlElement = xmlElement->nextSibling;
 	}
     //NSLog(@"No such element %@", aName);
-    [NSException raise:@"Invalid TBXMLElement value" format:@"TBXMLElement of %@ could not be found", aName];
+    //[NSException raise:@"Invalid TBXMLElement value" format:@"TBXMLElement of %@ could not be found", aName];
 	return nil;
 }
 

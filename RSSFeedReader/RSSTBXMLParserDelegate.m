@@ -52,7 +52,7 @@
             TBXMLElement *title = [TBXML childElementNamed:@"title" parentElement:element];
             TBXMLElement *description = [TBXML childElementNamed:@"description" parentElement:element];
             TBXMLElement *iurl = [TBXML childElementNamed:@"link" parentElement:element];
-            TBXMLElement *catagory = [TBXML childElementNamed:@"category" parentElement:element];
+            TBXMLElement *catagory = [TBXML childElementNamed:@"catagory" parentElement:element];
             
             //NSLog(@"init item");
             currentItem = [[RSSItem alloc]init];
