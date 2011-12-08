@@ -13,6 +13,7 @@
 @synthesize currentItem;
 @synthesize currentArray;
 @synthesize currentString;
+@synthesize unescaper;
 
 -(id)init{
     return [self initWithURL:@""];
@@ -30,6 +31,7 @@
         parser = [[NSXMLParser alloc]initWithContentsOfURL:url];
     }
     parser.delegate = self;
+    unescaper = [[XMLUnescaper alloc]init];
     
     if ([[url absoluteString] isEqualToString:@""]) {
         NSLog(@"No Url Input");
@@ -69,7 +71,7 @@
 		currentString =[[NSMutableString alloc]init];
 	}
     currentString = [NSMutableString stringWithString:string];
-    currentString = [self xmlSimpleUnescapeString:currentString];
+    currentString = [unescaper xmlSimpleUnescapeString:currentString];
 	
 }
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
@@ -105,7 +107,8 @@
     
     
 }
-
+/*
+// moved to own class
 - (NSMutableString *)xmlSimpleUnescapeString:(NSMutableString *)thisString
 {
     [thisString replaceOccurrencesOfString:@"&amp;"  withString:@"&"  options:NSLiteralSearch range:NSMakeRange(0, [thisString length])];
@@ -119,4 +122,5 @@
     
     return thisString;
 }
+ */
 @end

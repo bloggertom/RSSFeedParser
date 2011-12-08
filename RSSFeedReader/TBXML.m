@@ -175,6 +175,7 @@
 }
 
 + (NSString*) textForElement:(TBXMLElement*)aXMLElement {
+    
 	if (nil == aXMLElement->text) return @"";
 	return [NSString stringWithCString:&aXMLElement->text[0] encoding:NSUTF8StringEncoding];
 }
@@ -202,6 +203,8 @@
 		}
 		xmlElement = xmlElement->nextSibling;
 	}
+    //NSLog(@"No such element %@", aName);
+    [NSException raise:@"Invalid TBXMLElement value" format:@"TBXMLElement of %@ could not be found", aName];
 	return nil;
 }
 

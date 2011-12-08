@@ -24,6 +24,8 @@
 		DBEE799114901F9600EB3824 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEE799014901F9600EB3824 /* libz.dylib */; };
 		DBEE799614901FF100EB3824 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE799314901FF100EB3824 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DBEE799714901FF100EB3824 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE799514901FF100EB3824 /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DBEE79A1149025A600EB3824 /* RSSTBXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE79A0149025A600EB3824 /* RSSTBXMLParserDelegate.m */; };
+		DBEE79A4149027CB00EB3824 /* XMLUnescaper.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEE79A3149027CB00EB3824 /* XMLUnescaper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,10 @@
 		DBEE799314901FF100EB3824 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		DBEE799414901FF100EB3824 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
 		DBEE799514901FF100EB3824 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
+		DBEE799F149025A600EB3824 /* RSSTBXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSTBXMLParserDelegate.h; sourceTree = "<group>"; };
+		DBEE79A0149025A600EB3824 /* RSSTBXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSTBXMLParserDelegate.m; sourceTree = "<group>"; };
+		DBEE79A2149027CB00EB3824 /* XMLUnescaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUnescaper.h; sourceTree = "<group>"; };
+		DBEE79A3149027CB00EB3824 /* XMLUnescaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLUnescaper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 			children = (
 				DBEE79991490201700EB3824 /* TBXML */,
 				DBEE79981490200000EB3824 /* NSXMLParser */,
+				DBEE79A2149027CB00EB3824 /* XMLUnescaper.h */,
+				DBEE79A3149027CB00EB3824 /* XMLUnescaper.m */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -145,8 +153,8 @@
 		DBEE79981490200000EB3824 /* NSXMLParser */ = {
 			isa = PBXGroup;
 			children = (
-				DB2A1515148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m */,
 				DB2A1514148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.h */,
+				DB2A1515148D8FBF00B71FF4 /* RSSNSXMLParsingDelegate.m */,
 			);
 			name = NSXMLParser;
 			sourceTree = "<group>";
@@ -158,6 +166,8 @@
 				DBEE799314901FF100EB3824 /* NSDataAdditions.m */,
 				DBEE799414901FF100EB3824 /* TBXML.h */,
 				DBEE799514901FF100EB3824 /* TBXML.m */,
+				DBEE799F149025A600EB3824 /* RSSTBXMLParserDelegate.h */,
+				DBEE79A0149025A600EB3824 /* RSSTBXMLParserDelegate.m */,
 			);
 			name = TBXML;
 			sourceTree = "<group>";
@@ -236,6 +246,8 @@
 				DB2A1525148D95AE00B71FF4 /* IndicatorViewController.m in Sources */,
 				DBEE799614901FF100EB3824 /* NSDataAdditions.m in Sources */,
 				DBEE799714901FF100EB3824 /* TBXML.m in Sources */,
+				DBEE79A1149025A600EB3824 /* RSSTBXMLParserDelegate.m in Sources */,
+				DBEE79A4149027CB00EB3824 /* XMLUnescaper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RSSItem.h"
+#import "XMLUnescaper.h"
 @interface RSSNSXMLParsingDelegate : NSObject <NSXMLParserDelegate>
 
 @property (nonatomic, copy) NSURL *url;
@@ -15,10 +16,10 @@
 @property (nonatomic, retain)NSMutableString *currentString;
 @property (nonatomic, retain)RSSItem *currentItem;
 @property (nonatomic, retain)NSMutableArray *currentArray;
-
+@property (nonatomic, retain)XMLUnescaper *unescaper;
 -(id)init;
 -(id)initWithURL: (NSString *)thisURL;
 -(NSMutableArray *) getRSSArray;
--(NSMutableString *)xmlSimpleUnescapeString:(NSMutableString *)thisString;
+//-(NSMutableString *)xmlSimpleUnescapeString:(NSMutableString *)thisString;
 
 @end
