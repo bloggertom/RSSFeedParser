@@ -13,7 +13,13 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *itemDiscription;
 @property (nonatomic, retain) NSURL *link;
-@property (nonatomic, retain) NSString *catagory;
+@property (nonatomic, retain) NSMutableArray *categories;
+@property (nonatomic, retain) NSString *auther;
+@property (nonatomic, retain) NSURL *comments;
+@property (nonatomic, retain) NSDate *pubDate;
+@property (nonatomic, retain) NSString *source;
+
+@property (nonatomic, retain) NSDictionary *attributes;
 
 -(id)init;
 

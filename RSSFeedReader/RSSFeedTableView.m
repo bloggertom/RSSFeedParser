@@ -69,7 +69,7 @@
     
     if (!rssData || [rssData count] == 0) {
         //rssParser = [[RSSNSXMLParsingDelegate alloc]initWithURL:@"http://www.31days.co.uk/rss.xml"];
-        rssParser = [[RSSTBXMLParserDelegate alloc]initWithURL:@"http://users.aber.ac.uk/tiw9/wordpress/?feed=rss2"];//@"http://www.31days.co.uk/rss.xml"];
+        rssParser = [[RSSTBXMLParserDelegate alloc]initWithURL:@"http://feeds.bbci.co.uk/news/rss.xml"];//@"http://www.31days.co.uk/rss.xml"];
         rssData = [rssParser getRSSArray];
         
         [self.tableView reloadData];

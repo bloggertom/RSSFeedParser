@@ -12,14 +12,22 @@
 @synthesize title;
 @synthesize itemDiscription;
 @synthesize link;
-@synthesize catagory;
+@synthesize categories;
+@synthesize auther;
+@synthesize comments;
+@synthesize pubDate;
+@synthesize attributes;
+@synthesize source;
 
 -(id)init{
     self = [super init];
     title = [[NSString alloc]init];
     itemDiscription = [[NSString alloc]init];
     link = [[NSURL alloc]init];
-    catagory = [[NSString alloc]init];
+    categories = [[NSMutableArray alloc]init];
+    auther = [[NSString alloc]init];
+    comments = [[NSURL alloc]init];
+    pubDate = [[NSDate alloc]init];
     
     return self;
 }

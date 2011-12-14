@@ -175,8 +175,8 @@
 }
 
 + (NSString*) textForElement:(TBXMLElement*)aXMLElement {
-    
-	if (nil == aXMLElement->text) return @"";
+    //@ThomasWilson - Extended if statment to check if element == nil
+	if (nil == aXMLElement || nil == aXMLElement->text) return @"";
 	return [NSString stringWithCString:&aXMLElement->text[0] encoding:NSUTF8StringEncoding];
 }
 

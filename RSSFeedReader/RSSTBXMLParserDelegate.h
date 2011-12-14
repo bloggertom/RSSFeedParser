@@ -17,6 +17,7 @@
 @property(nonatomic, retain)NSURL *url;
 @property(nonatomic, retain)XMLUnescaper *unescaper;
 @property(nonatomic, retain)RSSItem *currentItem;
+@property(nonatomic, retain)NSMutableArray *categoriesArray;
 @property(nonatomic, retain)NSMutableArray *currentArray;
 
 -(id)init;

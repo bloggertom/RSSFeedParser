@@ -95,7 +95,7 @@
     }
     if ([elementName isEqualToString:@"catagory"]) {
         if (currentItem) {
-            currentItem.catagory = (NSString *) currentString;
+            [currentItem.categories addObject: (NSString *) currentString];
         }
         return;
     }

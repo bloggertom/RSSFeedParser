@@ -15,7 +15,7 @@
 @synthesize unescaper;
 @synthesize currentItem;
 @synthesize currentArray;
-
+@synthesize categoriesArray;
 -(id)init{
     return [self initWithURL:@""];
 }
@@ -49,26 +49,39 @@
             [self parseElements:element->firstChild];
         }
         if ([[TBXML elementName:element] isEqualToString:@"item"]) {
+            
             TBXMLElement *title = [TBXML childElementNamed:@"title" parentElement:element];
             TBXMLElement *description = [TBXML childElementNamed:@"description" parentElement:element];
             TBXMLElement *iurl = [TBXML childElementNamed:@"link" parentElement:element];
-            TBXMLElement *catagory = [TBXML childElementNamed:@"catagory" parentElement:element];
+            TBXMLElement *comments = [TBXML childElementNamed:@"comments" parentElement:element];
+            TBXMLElement *pubDate = [TBXML childElementNamed:@"pubDate" parentElement:element];
             
-            //NSLog(@"init item");
             currentItem = [[RSSItem alloc]init];
-           // NSLog(@"getting title text");
             currentItem.title = [unescaper xmlSimpleUnescapeString:[NSMutableString stringWithString:[TBXML textForElement:title]]];
-           // NSLog(@"getting description text");
             currentItem.itemDiscription = [unescaper xmlSimpleUnescapeString:[NSMutableString stringWithString:[TBXML textForElement:description]]];
-         //   NSLog(@"getting link text");
             currentItem.link = [NSURL URLWithString:[TBXML textForElement:iurl]];
-          //  NSLog(@"getting catagory text");
-            currentItem.catagory = [unescaper xmlSimpleUnescapeString:[NSMutableString stringWithString:[TBXML textForElement:catagory]]];
+            currentItem.comments = [NSURL URLWithString:[TBXML textForElement:comments]];
+            currentItem.categories = categoriesArray;
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            formatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss zzzz";
+            currentItem.pubDate = [formatter dateFromString:[TBXML textForElement:pubDate]];
+            NSLog(@"%@",[formatter stringFromDate:currentItem.pubDate]);
+            
+            
             
             [currentArray addObject:currentItem];
+            //NSLog(@"%@",currentItem.itemDiscription);
+            categoriesArray = nil;
             currentItem = nil;
         }
-        
+        if ([[TBXML elementName:element] isEqualToString:@"category"]) {
+            if (!categoriesArray) {
+                categoriesArray = [[NSMutableArray alloc]init];
+            }
+            NSString *type = [TBXML textForElement:element];
+            [categoriesArray addObject:type];
+            
+        }
 
 
         
